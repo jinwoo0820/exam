@@ -1,67 +1,85 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
-	<head>
-		<title>Web Tech Exam - Q4</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			input {
-				width: 200px;
-				height: 50px;
-			}
+<head>
+    <title>Web Tech Exam - Q4</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        input {
+            width: 200px;
+            height: 50px;
+        }
 
-			h1 {
-				text-align: center;
-				font-family: Arial;
-				font-weight: bold;
-			}
+        h1 {
+            text-align: center;
+            font-family: Arial;
+            font-weight: bold;
+        }
 
-			p {
-				text-align: center
-			}
+        p {
+            text-align: center
+        }
 
-			p#instruction {
-				font-family: arial;
-				font-size: 16pt;
-				color: navy;
-				padding: 10px 100px 10px 100px;
-				text-align: left;
-			}
+        p#instruction {
+            font-family: arial;
+            font-size: 16pt;
+            color: navy;
+            padding: 10px 100px 10px 100px;
+            text-align: left;
+        }
 
-			img {
-				border: 3px dotted black;
-			}
-		</style>
+        img {
+            border: 3px dotted black;
+        }
+        img.hover:hover{
+            border: dotted red;
+        }
+    </style>
 
-		<script type="text/javascript">
+    <script type="text/javascript">
+        function changeImage(paraID) {
 
-		</script>
+            var myimg = document.getElementById("a");
 
-	</head>
+            if (paraID == "c") {
+                myimg.src = "images/celtics.png";
+                myimg.alt = "celtics";
+                myimg.title = "Celtic";
+            }
+            else {
+                myimg.src = "images/patriots.jpg";
+                myimg.alt = "patriots";
+                myimg.title = "Patriots";
 
-	<body>
+            }     
+}
+    </script>
 
-		<h1>Web Tech Exam - Question 4</h1>
-		<p id="instruction">
-			This question has two parts: (a) Add appropriate functionality to the two buttons below such that when the first button is
-			clicked, the Celtics image is shown and when the second is clicked,the Patriots image is shown (5 points if written as
-			two separate functions, 10 if written as a single function). (b) When the mouse is moved over the image (note that only
-			one image is shown at a time), add a red, ridge border that is 10px thick. When the mouse is removed, the border should
-			disappear (10 points).
+</head>
 
-		</p>
-		<hr>
-		<p>
-			<img src="" alt="" title="This is the image" width="100" height="100" />
-		</p>
-		<p >
-			<input type="button" value="Celtics" />
-			<input type="button" value="Patriots" />
-		</p>
+<body>
+
+    <h1>Web Tech Exam - Question 4</h1>
+    <p id="instruction">
+        This question has two parts: (a) Add appropriate functionality to the two buttons below such that when the first button is
+        clicked, the Celtics image is shown and when the second is clicked,the Patriots image is shown (5 points if written
+        as two separate functions, 10 if written as a single function). (b) When the mouse is moved over the image (note
+        that only one image is shown at a time), add a red, ridge border that is 10px thick. When the mouse is removed, the
+        border should disappear (10 points).
+
+    </p>
+    <hr>
+    <p>
+        <img class="hover" id="a" src="" alt="" title="This is the image" width="100" height="100" />
+    </p>
+    <p>
+        <input type="button" value="Celtics" id="c" onclick="changeImage(this.id)" />
+        <input type="button" value="Patriots" id="p" onclick="changeImage(this.id)" />
+    </p>
 
 
-	</body>
-	<!-- Not that bad, isn't it?-->
+</body>
+<!-- Not that bad, isn't it?-->
 
 </html>

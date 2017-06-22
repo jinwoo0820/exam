@@ -15,14 +15,11 @@
                 margin-left: auto;
                 background-color: Silver;
             }
-
             h1 {
                 font-family: Arial;
                 font-weight: bold;
                 text-align: center;
             }
-
-
             p#instruction {
                 font-family: arial;
                 font-size: 16pt;
@@ -31,8 +28,19 @@
                 text-align: left;
             }
         </style>
-        <script>
+        <script  type="text/javascript">
+            var array = [4, 2];
+var max = Math.max.apply(Math, array); 
+var min = Math.min.apply(Math, array); 
 
+function sumSeries (smallest, largest) {
+    var n = (largest - smallest + 1);
+    var sum = n * (smallest + largest) / 2; 
+
+    return sum;
+}
+
+var sum = sumSeries(min, max);
         </script>
     </head>
 
